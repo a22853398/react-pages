@@ -19,25 +19,51 @@ const NavbarOptions = styled.ul(
         userSelect: 'none',
     }
 );
+const NavbarLink = styled.a(
+    {
+        textDecoration: 'none',
+        '&:visited': {
+            color: 'black'
+        },
+        '&:link':{
+            color: 'black'
+        },
+        '&:active':{
+            color: 'black'
+        }
+    }
+);
 
 const NavbarOption = styled.li(
     {
         listStyle: 'none',
-        padding: '0% 2%',
+        padding: '0% 1%',
+        margin: '0% 0%',
         fontSize: '1.3rem',
         cursor: 'pointer',
+
         '&:hover': {
             color: 'white',
             backgroundColor: 'darkgreen',
         },
-
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
         
+        '& a':{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+
+            textDecoration: 'none',
+            '&:visited, &:active, &:link' :{
+                color: 'black'
+            },
+            '&:hover':{
+                color: 'white'
+            }
+        }
     }
 );
+
 
 function Navbar(){
     return(
@@ -47,14 +73,11 @@ function Navbar(){
                     NavbarData.map(
                         (value, key) => {
                             return(
-                                <NavbarOption 
-                                    key= {key}
-                                    onClick={ () => {
-                                        window.location.pathname = value.url
-                                    }}
-                                >
-                                    {value.icon}<p>{value.title}</p>
-                                </NavbarOption>
+                                    <NavbarOption key= {key}>
+                                        <a href={value.url}>
+                                            {value.icon}<p>{value.title}</p>
+                                        </a>
+                                    </NavbarOption>
                             );
                         }
                     )
