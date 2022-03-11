@@ -10,12 +10,32 @@ const TitleText = styled.h1(
     }
 );
 
+const TitleUrl = styled.a(
+    {
+        textDecoration: 'none',
+        '&:hover': {
+            color: 'yellowgreen'
+        },
+        '&:visited': {
+            color: 'darkgreen'
+        },
+        '&:link':{
+            color: 'darkgreen'
+        },
+        '&:active':{
+            color: 'darkgreen'
+        },
+    }
+);
 
 function HeaderText(props){
-    const homeUrl = "/home";
     return(
         <React.StrictMode>
-                <TitleText><a href={homeUrl}>{props.title}</a></TitleText>
+                <TitleText>
+                    <TitleUrl href={props.linkto}>
+                        {props.title}
+                    </TitleUrl>
+                </TitleText>
         </React.StrictMode>
     );
 };

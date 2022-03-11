@@ -10,8 +10,11 @@ const ProfileIcon = styled.img(
 ); 
 
 function HeaderIcon(props){
+    
     return(
-        <ProfileIcon src={props.src} />
+        <a href= {props.linkto}>
+            <ProfileIcon src={props.src} />
+        </a>
     );
 };
 export default HeaderIcon;

@@ -16,16 +16,19 @@ const HeaderDiv = styled.div(
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+
+        userSelect: 'none',
     }
 );
 
 function Header(){
     
     const headerText = "いこうの駆け出しサイト";
+    const headerUrl = "/home";
     return(
         <HeaderDiv>
-            <HeaderIcon src={profileIcon}/>
-            <HeaderText title={headerText} />
+            <HeaderIcon src={profileIcon} linkto={headerUrl}/>
+            <HeaderText title={headerText} linkto={headerUrl}/>
         </HeaderDiv>
     );
 };

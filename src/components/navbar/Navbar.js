@@ -15,6 +15,8 @@ const NavbarOptions = styled.ul(
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
+
+        userSelect: 'none',
     }
 );
 
