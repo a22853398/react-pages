@@ -53,6 +53,9 @@ const NavbarOption = styled.li(
             justifyContent: 'center',
             alignItems: 'center',
 
+            width: '100%',
+            height: '100%',
+
             textDecoration: 'none',
             '&:visited, &:active, &:link' :{
                 color: 'black'
