@@ -24,7 +24,7 @@ const HeaderDiv = styled.div(
 function Header(){
     
     const headerText = "いこうの駆け出しサイト";
-    const headerUrl = "/home";
+    const headerUrl = "./home";
     return(
         <HeaderDiv>
             <HeaderIcon src={profileIcon} linkto={headerUrl}/>

@@ -7,27 +7,27 @@ export const NavbarData = [
     {
         title: 'ホーム',
         icon: <AiOutlineHome />,
-        url: '/home'
+        url: './home'
     },
     {
         title: 'ツール',
         icon: <AiOutlineTool />,
-        url: '/tool'
+        url: './tool'
     },
     {
         title: '貯蔵庫',
         icon: <HiOutlineOfficeBuilding />,
-        url: '/kura'
+        url: './kura'
     },
     {
         title: 'プロフィール',
         icon: <CgProfile />,
-        url: 'about'
+        url: './about'
     },
     {
         title: 'お問い合わせ',
         icon: <AiOutlineMail />,
-        url: '/contact'
+        url: './contact'
     },
 ];
 
