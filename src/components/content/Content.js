@@ -15,7 +15,7 @@ const routerBasename = process.env.NODE_ENV === 'development' ? '/' : '/react-pa
 function Content(){
     return (
         <div>
-            <HashRouter basename= {routerBasename}>
+            
                 <Routes>
                     <Route path="/about" element={<About/>} />
                     <Route path="/contact" element={<Contact/>} />
@@ -23,7 +23,7 @@ function Content(){
                     <Route path="/home" element={<Home/>} />
                     <Route path="/tool" element={<Tool/>} />
                 </Routes>
-            </HashRouter>
+            
         </div>
     );
 };
