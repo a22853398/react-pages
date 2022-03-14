@@ -11,7 +11,7 @@ import Tool from "./tool/Tool";
 function Content(){
     return (
         <div>
-            <BrowserRouter basename={ process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <Routes>
                     <Route path="/about" element={<About/>} />
                     <Route path="/contact" element={<Contact/>} />
