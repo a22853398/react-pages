@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavbarData } from "./NavbarData";
+import { Routes, Route } from "react-router-dom";
 
 const NavbarDiv = styled.div(
     {
