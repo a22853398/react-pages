@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 
 import About from "./about/About";
 import Contact from "./contact/Contact";
@@ -15,7 +15,7 @@ const routerBasename = process.env.NODE_ENV === 'development' ? '/' : '/react-pa
 function Content(){
     return (
         <div>
-            <BrowserRouter basename= {routerBasename}>
+            <HashRouter basename= {routerBasename}>
                 <Routes>
                     <Route path="/about" element={<About/>} />
                     <Route path="/contact" element={<Contact/>} />
@@ -23,7 +23,7 @@ function Content(){
                     <Route path="/home" element={<Home/>} />
                     <Route path="/tool" element={<Tool/>} />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 };
